@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lê Quốc Đạt | Phó Giám đốc Kỹ thuật, Fractal</title>
+  <meta name="description" content="Lê Quốc Đạt, Phó Giám đốc Kỹ thuật tại Công ty Cổ phần Công nghệ Fractal. Hơn 12 năm xây dựng sản phẩm mobile, kiến trúc giải pháp và dẫn dắt đội kỹ thuật.">
+  <meta name="author" content="Lê Quốc Đạt">
+  <meta name="theme-color" content="#0d0e10">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Lê Quốc Đạt | Phó Giám đốc Kỹ thuật, Fractal">
+  <meta property="og:description" content="Hơn 12 năm xây dựng sản phẩm mobile và giải pháp công nghệ cho thương hiệu tại Việt Nam, Singapore và Mỹ.">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta property="og:locale" content="vi_VN">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0e10'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='30' font-weight='700' fill='%23d6ad55'%3EQD%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Chọn theme trước khi render để tránh nháy màn hình
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lê Quốc Đạt",
+    "alternateName": "Le Quoc Dat",
+    "jobTitle": "Phó Giám đốc Kỹ thuật",
+    "worksFor": { "@type": "Organization", "name": "Công ty Cổ phần Công nghệ Fractal", "url": "https://fractal.vn" },
+    "email": "mailto:dat.le@fractal.vn",
+    "telephone": "+84975752737",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Học viện Công nghệ Bưu chính Viễn thông (PTIT)" },
+    "knowsAbout": ["Android", "Kotlin", "Flutter", "iOS", "ReactJS", "NodeJS", "Solution Architecture", "Embedded Systems", "Technical Leadership"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Lê Quốc Đạt, về đầu trang">
+        <span class="nav__mark" aria-hidden="true">QD</span>
+        <span class="nav__name">Lê Quốc Đạt</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Điều hướng chính">
+        <a href="#about">Giới thiệu</a>
+        <a href="#capabilities">Năng lực</a>
+        <a href="#projects">Dự án</a>
+        <a href="#journey">Hành trình</a>
+        <a href="#services">Hợp tác</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối">
+          <i class="ph ph-sun theme-icon--light" aria-hidden="true"></i>
+          <i class="ph ph-moon theme-icon--dark" aria-hidden="true"></i>
+        </button>
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta">Đặt lịch trao đổi</a>
+        <button class="icon-btn nav__menu" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="ph ph-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#about">Giới thiệu</a>
+      <a href="#capabilities">Năng lực</a>
+      <a href="#projects">Dự án</a>
+      <a href="#journey">Hành trình</a>
+      <a href="#services">Hợp tác</a>
+      <a href="#contact" class="btn btn--primary">Đặt lịch trao đổi</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow hero__in" style="--i:0">Phó Giám đốc Kỹ thuật tại Fractal</p>
+          <h1 class="hero__title hero__in" style="--i:1">Lê Quốc Đạt</h1>
+          <p class="hero__lead hero__in" style="--i:2">
+            12 năm biến yêu cầu kinh doanh thành sản phẩm công nghệ chạy thật, cho thương hiệu tại Việt Nam, Singapore và Mỹ.
+          </p>
+          <div class="hero__ctas hero__in" style="--i:3">
+            <a href="#contact" class="btn btn--primary">Đặt lịch trao đổi <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+            <a href="cv.pdf" class="btn btn--ghost" download>Tải CV <i class="ph ph-download-simple" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <figure class="hero__portrait hero__in" style="--i:2">
+          <!-- Ảnh chân dung: đặt file vào assets/avatar.jpg (tỉ lệ 4:5, tối thiểu 960x1200) -->
+          <img src="assets/avatar.jpg" alt="Chân dung Lê Quốc Đạt" width="960" height="1200" fetchpriority="high"
+               onerror="this.remove(); document.querySelector('.hero__portrait').classList.add('is-fallback')">
+          <div class="portrait-fallback" aria-hidden="true">
+            <span>QD</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="Con số nổi bật">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num"><span data-count="12">12</span>+</span>
+          <span class="stat__label">năm trong nghề, từ Embedded / lập trình vi mạch đến kiến trúc giải pháp</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="12">12</span>
+          <span class="stat__label">dự án lớn đã tham gia xây dựng, nhiều hệ thống vận hành đến nay</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num"><span data-count="500">500</span>+</span>
+          <span class="stat__label">nhân viên kinh doanh dùng hằng ngày hệ thống Khatoco (KTC)</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="3">3</span>
+          <span class="stat__label">thị trường khách hàng: Việt Nam, Singapore, Mỹ</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands" aria-label="Thương hiệu đã xây dựng sản phẩm">
+      <p class="brands__label container">Sản phẩm tôi từng góp tay xây dựng cho</p>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>CapitaLand</span><span>DIRECTV</span><span>Abbott</span><span>BAT</span><span>Khatoco</span><span>Murad</span><span>FrieslandCampina</span>
+          <span>CapitaLand</span><span>DIRECTV</span><span>Abbott</span><span>BAT</span><span>Khatoco</span><span>Murad</span><span>FrieslandCampina</span>
+        </div>
+      </div>
+      <ul class="sr-only">
+        <li>CapitaLand</li><li>DIRECTV</li><li>Abbott</li><li>BAT</li><li>Khatoco</li><li>Murad</li><li>FrieslandCampina</li>
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="about__statement reveal">
+          12 năm trong nghề, từ Embedded / lập trình vi mạch đến hàng chục sản phẩm mobile và web, hôm nay tôi chịu trách nhiệm cho
+          <em>những quyết định kỹ thuật</em> có ảnh hưởng đến cả doanh nghiệp.
+        </h2>
+
+        <div class="about__grid">
+          <div class="about__body reveal">
+            <p>
+              Tại Fractal, tôi giữ vai trò Phó Giám đốc Kỹ thuật: định hướng công nghệ, thiết kế giải pháp cho khách hàng doanh nghiệp,
+              và xây dựng đội ngũ có thể giao sản phẩm ổn định qua nhiều năm.
+            </p>
+            <p>
+              Vì đi lên từ vị trí developer, tôi vẫn đọc code, review kiến trúc và hiểu cái giá thật của từng lựa chọn kỹ thuật.
+              Đối tác làm việc với tôi nhận được một người vừa nói được ngôn ngữ kinh doanh, vừa chịu trách nhiệm đến tận dòng code.
+            </p>
+          </div>
+
+          <ul class="principles reveal">
+            <li>
+              <i class="ph ph-target" aria-hidden="true"></i>
+              <div><strong>Bài toán trước, công nghệ sau.</strong> Chọn giải pháp phù hợp ngân sách và giai đoạn, không chọn vì đang thịnh hành.</div>
+            </li>
+            <li>
+              <i class="ph ph-git-branch" aria-hidden="true"></i>
+              <div><strong>Kiến trúc để sống lâu.</strong> Cấu trúc dự án rõ ràng ngay từ đầu để đội sau tiếp quản không phải viết lại.</div>
+            </li>
+            <li>
+              <i class="ph ph-handshake" aria-hidden="true"></i>
+              <div><strong>Minh bạch với đối tác.</strong> Nói sớm về rủi ro, cam kết điều làm được, và giao đúng điều đã cam kết.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES (bento) -->
+    <section class="section" id="capabilities">
+      <div class="container">
+        <h2 class="section__title reveal">Năng lực chuyên môn</h2>
+        <p class="section__lead reveal">Chiều sâu kỹ thuật của một developer, tầm nhìn của người chịu trách nhiệm giải pháp.</p>
+
+        <div class="bento">
+          <article class="cell cell--mobile reveal">
+            <i class="ph ph-device-mobile cell__icon" aria-hidden="true"></i>
+            <div class="cell__platforms" aria-hidden="true">
+              <i class="ph ph-android-logo"></i><i class="ph ph-apple-logo"></i><i class="ph ph-globe-simple"></i>
+            </div>
+            <h3>Mobile engineering</h3>
+            <p>Android native từ 2015, dẫn dắt đội mobile Android, iOS và Flutter từ 2020, mở rộng sang web (ReactJS, NodeJS) từ 2023.</p>
+            <ul class="chips">
+              <li>Kotlin</li><li>Java</li><li>iOS</li><li>Flutter</li><li>NDK</li><li>ReactJS</li><li>NodeJS</li>
+            </ul>
+          </article>
+
+          <article class="cell cell--lead reveal">
+            <i class="ph ph-users-three cell__icon" aria-hidden="true"></i>
+            <h3>Dẫn dắt kỹ thuật</h3>
+            <p>Làm việc với đội từ 2 đến 10 người. Code review, chuẩn quy trình, kèm cặp developer trẻ.</p>
+          </article>
+
+          <article class="cell cell--media reveal">
+            <i class="ph ph-video-camera cell__icon" aria-hidden="true"></i>
+            <h3>Real-time và media</h3>
+            <p>Streaming video, camera IP qua RTSP, điều khiển thiết bị từ xa, tối ưu hiệu năng cùng đội C++.</p>
+            <ul class="chips">
+              <li>RTSP</li><li>Video Streaming</li><li>Socket</li><li>TCP / UDP</li><li>OpenCV</li>
+            </ul>
+          </article>
+
+          <article class="cell cell--integr reveal">
+            <i class="ph ph-plugs-connected cell__icon" aria-hidden="true"></i>
+            <h3>Tích hợp sản phẩm</h3>
+            <p>Thanh toán (kể cả máy POS), bản đồ, phân tích hành vi, đăng nhập mạng xã hội, loyalty và CRM.</p>
+            <ul class="chips">
+              <li>Payment</li><li>Google Maps</li><li>Analytics</li><li>Facebook SDK</li>
+            </ul>
+          </article>
+
+          <article class="cell cell--hw reveal">
+            <i class="ph ph-cpu cell__icon" aria-hidden="true"></i>
+            <h3>Gốc phần cứng và AI</h3>
+            <p>Thiết kế mạch STM32, truyền nhận sóng RF, nhận dạng giọng nói bằng mạng neural. Nền tảng để hiểu hệ thống từ tầng thấp nhất.</p>
+            <ul class="chips">
+              <li>STM32</li><li>RF</li><li>Neural Network</li><li>MATLAB</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="section arch" id="architecture">
+      <div class="container">
+        <h2 class="section__title reveal">Kiến trúc giải pháp</h2>
+        <p class="section__lead reveal">Từ bài toán kinh doanh đến hệ thống chạy ổn định nhiều năm: chọn đúng công nghệ, chia đúng lớp, để đội sau tiếp quản không phải viết lại.</p>
+
+        <div class="arch__grid">
+          <aside class="arch__panel reveal">
+            <p class="arch__panel-title">Kiến trúc được kiểm chứng bằng thời gian</p>
+            <dl class="arch__facts">
+              <div><dt>2018 - nay</dt><dd>Hệ thống quản lý nhà phân phối BAT, vẫn vận hành và được bảo trì.</dd></div>
+              <div><dt>2019 - nay</dt><dd>Nền tảng bán hàng Khatoco, phục vụ hơn 500 nhân viên kinh doanh mỗi ngày.</dd></div>
+              <div><dt>2025</dt><dd>Thiết kế kiến trúc và dẫn dắt kỹ thuật cho các sản phẩm mới của Abbott, Khatoco.</dd></div>
+            </dl>
+          </aside>
+
+          <ul class="arch__domains">
+            <li class="domain reveal">
+              <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+              <h3>Phân tích và định hướng</h3>
+              <p>Khảo sát nghiệp vụ, chốt phạm vi MVP, chọn công nghệ theo ngân sách và giai đoạn, ước lượng công sức, nêu rõ rủi ro ngay từ đầu.</p>
+              <ul class="chips"><li>Phân tích nghiệp vụ</li><li>MVP scope</li><li>Ước lượng</li><li>Rủi ro</li></ul>
+            </li>
+            <li class="domain reveal">
+              <i class="ph ph-stack" aria-hidden="true"></i>
+              <h3>Kiến trúc ứng dụng</h3>
+              <p>Tách lớp rõ ràng, module hoá, quản lý trạng thái nhất quán. Áp dụng mẫu thiết kế phù hợp với quy mô đội, không thiết kế quá tay.</p>
+              <ul class="chips"><li>MVP</li><li>Clean Architecture</li><li>Design Patterns</li><li>Modular</li></ul>
+            </li>
+            <li class="domain reveal">
+              <i class="ph ph-database" aria-hidden="true"></i>
+              <h3>API và mô hình dữ liệu</h3>
+              <p>Thiết kế RESTful API và ERD cùng đội backend, thống nhất hợp đồng dữ liệu giữa mobile, web và hệ thống lõi trước khi code.</p>
+              <ul class="chips"><li>RESTful API</li><li>ERD</li><li>API contract</li><li>Phân quyền</li></ul>
+            </li>
+            <li class="domain reveal">
+              <i class="ph ph-buildings" aria-hidden="true"></i>
+              <h3>Hệ thống doanh nghiệp</h3>
+              <p>Kinh nghiệm thực chiến với DMS, quản lý lực lượng bán hàng, CRM và loyalty, thương mại điện tử, dashboard BI, tích hợp thanh toán.</p>
+              <ul class="chips"><li>DMS</li><li>CRM / Loyalty</li><li>E-commerce</li><li>BI</li></ul>
+            </li>
+            <li class="domain reveal">
+              <i class="ph ph-gauge" aria-hidden="true"></i>
+              <h3>Hiệu năng và bảo mật</h3>
+              <p>Tối ưu tải cao với caching, bảo vệ dữ liệu thanh toán, giám sát vận hành, xử lý điểm nghẽn hiệu năng ở tầng ứng dụng và truyền dữ liệu.</p>
+              <ul class="chips"><li>Caching</li><li>Payment security</li><li>Monitoring</li><li>Streaming</li></ul>
+            </li>
+            <li class="domain reveal">
+              <i class="ph ph-flow-arrow" aria-hidden="true"></i>
+              <h3>Bàn giao và vận hành</h3>
+              <p>Chuẩn code và review, tài liệu kỹ thuật, kèm cặp đội, bảo trì dài hạn. Giải pháp phải sống được sau khi người thiết kế rời dự án.</p>
+              <ul class="chips"><li>Code review</li><li>Tài liệu</li><li>Kèm cặp</li><li>Bảo trì</li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title reveal">Dự án tiêu biểu</h2>
+        <p class="section__lead reveal">Sản phẩm thật, người dùng thật. Nhiều hệ thống vẫn đang vận hành và được tôi đồng hành bảo trì đến nay.</p>
+
+        <div class="projects">
+          <article class="project project--feature reveal">
+            <div class="project__visual project__visual--loyalty"><i class="ph ph-map-pin-line" aria-hidden="true"></i></div>
+            <div class="project__body">
+              <p class="project__meta">Khatoco, 2019 đến nay</p>
+              <h3>Nền tảng quản lý đội ngũ bán hàng (KTC)</h3>
+              <p>Ứng dụng cho nhân viên kinh doanh: viếng thăm khách hàng, chấm công GPS, KPI, tồn kho, duyệt quy trình. Phục vụ hơn 500 nhân viên và 80 giám sát viên.</p>
+              <ul class="chips"><li>Android</li><li>.NET</li><li>GPS</li><li>BI</li></ul>
+              <a class="project__link" href="https://fractal.vn/projects/nen-tang-ktc/" target="_blank" rel="noopener">Xem case study <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="project project--feature reveal">
+            <div class="project__visual project__visual--commerce"><i class="ph ph-chart-line-up" aria-hidden="true"></i></div>
+            <div class="project__body">
+              <p class="project__meta">British American Tobacco, 2018 đến nay</p>
+              <h3>Hệ thống quản lý nhà phân phối (DMS)</h3>
+              <p>Quản lý đội ngũ bán hàng, chương trình xúc tiến, kích hoạt thị trường và dashboard BI theo thời gian thực trên toàn quốc.</p>
+              <ul class="chips"><li>Android</li><li>Big Data</li><li>BI Dashboard</li></ul>
+              <a class="project__link" href="https://fractal.vn/projects/he-thong-quan-ly-nha-phan-phoi-bat/" target="_blank" rel="noopener">Xem case study <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__meta">FrieslandCampina, 2022 - 2023</p>
+            <h3>Friso Loyalty CRM</h3>
+            <p>Hành trình Lead, Deal, Engage cùng tích điểm đổi quà, voucher và hạng thành viên. Dựng cấu trúc dự án, dẫn dắt đội mobile.</p>
+            <ul class="chips"><li>Flutter</li><li>NodeJS</li><li>ReactJS</li></ul>
+            <a class="project__link" href="https://fractal.vn/projects/fcv-nen-tang-crm-quan-ly-khach-hang-than-thiet-friso/" target="_blank" rel="noopener">Case study <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__meta">Murad, 2020 - 2022</p>
+            <h3>Murad E-commerce</h3>
+            <p>Website thương mại điện tử, CRM nội bộ và hệ thống Affiliate cho thương hiệu mỹ phẩm. Dẫn dắt đội mobile.</p>
+            <ul class="chips"><li>Flutter</li><li>Android</li><li>iOS</li></ul>
+            <a class="project__link" href="https://fractal.vn/projects/nen-tang-thuong-mai-dien-tu-murad/" target="_blank" rel="noopener">Case study <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__meta">Nemo, 2023 đến nay</p>
+            <h3>Quản lý nhân viên khuyến mại</h3>
+            <p>Số hoá công việc của PG tại điểm bán: giao việc, triển khai khuyến mại, báo cáo điện tử và dashboard KPI.</p>
+            <ul class="chips"><li>Mobile</li><li>Web Dashboard</li></ul>
+            <a class="project__link" href="https://fractal.vn/projects/ung-dung-nemo/" target="_blank" rel="noopener">Case study <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__meta">Plate Tool, 2025 đến nay</p>
+            <h3>Zalo Mini App dinh dưỡng trẻ em</h3>
+            <p>Tính calo từ bữa ăn, đối chiếu chuẩn dinh dưỡng theo độ tuổi, báo cáo cá nhân hoá cho phụ huynh. Kiến trúc và dẫn dắt kỹ thuật.</p>
+            <ul class="chips"><li>Zalo Mini App</li><li>NodeJS</li><li>ReactJS</li></ul>
+            <a class="project__link" href="https://fractal.vn/projects/plate-tool-mini-app-nen-tang-theo-doi-dinh-duong-tre-em-danh-cho-phu-huynh/" target="_blank" rel="noopener">Case study <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+
+        <details class="more-projects reveal">
+          <summary>Xem thêm 6 dự án trước đó <i class="ph ph-caret-down" aria-hidden="true"></i></summary>
+          <div class="more-projects__grid">
+            <div class="mini">
+              <h4>Abbott Detailing</h4>
+              <p>Ứng dụng giới thiệu sản phẩm theo từng nhãn sữa (Glucerna, Similac, Ensure) và thu thập thông tin khách hàng cho CRM.</p>
+            </div>
+            <div class="mini">
+              <h4>CapitaStar, Singapore</h4>
+              <p>Mua sắm, tích điểm tại CapitaLand Mall, kèm ứng dụng merchant tích hợp thanh toán trên máy POS.</p>
+              <a class="project__link" href="https://play.google.com/store/apps/details?id=com.capitamallsasia.capitastar" target="_blank" rel="noopener">Google Play <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="mini">
+              <h4>DIRECTV for Tablets, Mỹ</h4>
+              <p>Xem phim, thể thao trên tablet và phát sang TV.</p>
+            </div>
+            <div class="mini">
+              <h4>ONVIF Viewer</h4>
+              <p>Xem và điều khiển camera IP qua RTSP, tối ưu hiệu năng cùng đội C++.</p>
+            </div>
+            <div class="mini">
+              <h4>Eli Remote</h4>
+              <p>Điều khiển máy tính từ xa trên Android, lập trình ở tầng NDK.</p>
+              <a class="project__link" href="https://play.google.com/store/apps/details?id=com.eli.vnc" target="_blank" rel="noopener">Google Play <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="mini">
+              <h4>Smart Home</h4>
+              <p>Điều khiển thiết bị bằng giọng nói: tự thiết kế mạch STM32 và thuật toán nhận dạng trên MATLAB.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section journey" id="journey">
+      <div class="container journey__grid">
+        <div class="journey__head">
+          <p class="eyebrow reveal">Hành trình nghề nghiệp</p>
+          <h2 class="section__title reveal">Từ dòng code đầu tiên đến bàn điều hành kỹ thuật</h2>
+          <div class="creds reveal">
+            <div class="cred">
+              <i class="ph ph-buildings" aria-hidden="true"></i>
+              <div>
+                <strong>Fractal</strong>
+                <span>2019 - nay</span>
+              </div>
+            </div>
+            <div class="cred">
+              <i class="ph ph-buildings" aria-hidden="true"></i>
+              <div>
+                <strong>FPT Software</strong>
+                <span>2016 - 2018</span>
+              </div>
+            </div>
+            <div class="cred">
+              <i class="ph ph-buildings" aria-hidden="true"></i>
+              <div>
+                <strong>Elitech Việt Nam (nay là NASYS)</strong>
+                <span>2014 - 2015</span>
+              </div>
+            </div>
+            <div class="cred">
+              <i class="ph ph-certificate" aria-hidden="true"></i>
+              <div>
+                <strong>Android ATC AND-401</strong>
+                <span>Android Application Development</span>
+              </div>
+            </div>
+            <div class="cred">
+              <i class="ph ph-graduation-cap" aria-hidden="true"></i>
+              <div>
+                <strong>Học viện Công nghệ Bưu chính Viễn thông</strong>
+                <span>Công nghệ Kỹ thuật Điện, Điện tử</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl reveal tl--now">
+            <span class="tl__time">2026</span>
+            <h3>Phó Giám đốc Kỹ thuật (Deputy CTO)</h3>
+            <p>Định hướng công nghệ, chịu trách nhiệm kiến trúc giải pháp và phát triển đội ngũ kỹ thuật của Fractal.</p>
+          </li>
+          <li class="tl reveal">
+            <span class="tl__time">2025</span>
+            <h3>Technical Leader</h3>
+            <p>Thiết kế kiến trúc và dẫn dắt kỹ thuật cho các sản phẩm mới cho Abbott, Khatoco.</p>
+          </li>
+          <li class="tl reveal">
+            <span class="tl__time">2023 - 2024</span>
+            <h3>Web Developer và Mobile Leader</h3>
+            <p>Mở rộng sang web với ReactJS, NodeJS, đồng thời dẫn dắt đội mobile. Dự án Nemo.</p>
+          </li>
+          <li class="tl reveal">
+            <span class="tl__time">2020 - 2022</span>
+            <h3>Mobile Leader</h3>
+            <p>Dẫn dắt đội mobile Android, iOS, Flutter. Dự án Murad, Friso Loyalty.</p>
+          </li>
+          <li class="tl reveal">
+            <span class="tl__time">2015 - 2020</span>
+            <h3>Android Developer</h3>
+            <p>Từ media streaming cho DIRECTV, CapitaStar tại Singapore đến hệ thống bán hàng Abbott, BAT, Khatoco.</p>
+          </li>
+          <li class="tl reveal">
+            <span class="tl__time">2014 - 2015</span>
+            <h3>Embedded Engineer</h3>
+            <p>Kỹ sư Embedded / lập trình vi mạch. Smart Home điều khiển bằng giọng nói: tự làm từ mạch STM32 đến mô hình nhận dạng.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container services__grid">
+        <div class="services__head">
+          <h2 class="section__title reveal">Những cách chúng ta có thể hợp tác</h2>
+          <p class="section__lead reveal">Từ một buổi tư vấn đến đồng hành dài hạn, tuỳ giai đoạn và bài toán của bạn.</p>
+          <a href="#contact" class="btn btn--primary reveal">Đặt lịch trao đổi <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <ul class="service-list">
+          <li class="service reveal">
+            <i class="ph ph-compass-tool" aria-hidden="true"></i>
+            <div>
+              <h3>Tư vấn giải pháp và kiến trúc</h3>
+              <p>Phân tích bài toán, lựa chọn công nghệ, thiết kế kiến trúc có thể mở rộng trước khi viết dòng code đầu tiên.</p>
+            </div>
+          </li>
+          <li class="service reveal">
+            <i class="ph ph-device-mobile-speaker" aria-hidden="true"></i>
+            <div>
+              <h3>Xây dựng sản phẩm mobile</h3>
+              <p>Android native hoặc Flutter, từ khởi tạo dự án đến phát hành trên Google Play và App Store.</p>
+            </div>
+          </li>
+          <li class="service reveal">
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+            <div>
+              <h3>Đánh giá kỹ thuật</h3>
+              <p>Review kiến trúc, chất lượng code và hiệu năng của sản phẩm hiện có, kèm lộ trình cải thiện cụ thể.</p>
+            </div>
+          </li>
+          <li class="service reveal">
+            <i class="ph ph-strategy" aria-hidden="true"></i>
+            <div>
+              <h3>Xây dựng và dẫn dắt đội kỹ thuật</h3>
+              <p>Thiết lập quy trình, chuẩn code review và kèm cặp để đội giao sản phẩm đều đặn, ít phụ thuộc cá nhân.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" aria-labelledby="processTitle">
+      <div class="container">
+        <h2 class="section__title reveal" id="processTitle">Cách tôi làm việc</h2>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__icon"><i class="ph ph-ear" aria-hidden="true"></i></span>
+            <h3>Lắng nghe</h3>
+            <p>Hiểu mục tiêu kinh doanh, người dùng và giới hạn thực tế về thời gian, ngân sách.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__icon"><i class="ph ph-blueprint" aria-hidden="true"></i></span>
+            <h3>Thiết kế</h3>
+            <p>Đề xuất giải pháp, kiến trúc và kế hoạch triển khai kèm các rủi ro đã được nêu rõ.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__icon"><i class="ph ph-code" aria-hidden="true"></i></span>
+            <h3>Xây dựng</h3>
+            <p>Phát triển theo từng mốc có thể kiểm chứng, review code chặt, báo cáo tiến độ minh bạch.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__icon"><i class="ph ph-rocket-launch" aria-hidden="true"></i></span>
+            <h3>Đồng hành</h3>
+            <p>Phát hành, bàn giao tài liệu và tiếp tục hỗ trợ khi sản phẩm vận hành.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- LIFE: ảnh đặt tại assets/life/phuot.jpg và assets/life/bong-da.jpg (tỉ lệ 4:3, tối thiểu 1200x900) -->
+    <section class="section life" id="life">
+      <div class="container">
+        <h2 class="section__title reveal">Ngoài giờ làm việc</h2>
+        <p class="section__lead reveal">Những hoạt động giữ cho tôi cân bằng, và dạy tôi không ít điều về cách làm việc.</p>
+
+        <div class="life__grid">
+          <article class="hobby hobby--wide reveal">
+            <div class="hobby__media">
+              <img src="assets/life/phuot.jpg" alt="Lê Quốc Đạt trên một chuyến đi phượt" loading="lazy" width="1200" height="900" onerror="this.remove()">
+              <i class="ph ph-motorcycle" aria-hidden="true"></i>
+            </div>
+            <div class="hobby__body">
+              <h3>Đi phượt</h3>
+              <p>Những chuyến đi dài bằng xe máy dạy tôi chuẩn bị kỹ trước khi xuất phát, bình tĩnh xử lý tình huống bất ngờ, và kiên nhẫn với cả hành trình thay vì chỉ nhìn vào đích đến.</p>
+            </div>
+          </article>
+
+          <article class="hobby reveal">
+            <div class="hobby__media">
+              <img src="assets/life/bong-da.jpg" alt="Lê Quốc Đạt chơi bóng đá cùng đồng đội" loading="lazy" width="1200" height="900" onerror="this.remove()">
+              <i class="ph ph-soccer-ball" aria-hidden="true"></i>
+            </div>
+            <div class="hobby__body">
+              <h3>Đá bóng</h3>
+              <p>Sân bóng cuối tuần cũng giống một dự án: thắng nhờ đội hình ăn ý, mỗi người hiểu rõ vai trò và sẵn sàng bọc lót cho nhau.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS: tự ẩn khi chưa có dữ liệu. Thêm nhận xét thật trong main.js (mảng TESTIMONIALS) -->
+    <section class="section testimonials" id="testimonials" hidden>
+      <div class="container">
+        <h2 class="section__title reveal">Đối tác nói gì</h2>
+        <div class="quotes" id="quotes"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container faq__grid">
+        <h2 class="section__title reveal">Câu hỏi thường gặp</h2>
+        <div class="faq__list">
+          <details class="qa reveal">
+            <summary>Tôi có thể hợp tác với anh dưới hình thức nào? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+            <p>Tư vấn theo buổi, đánh giá kỹ thuật theo gói, hoặc triển khai dự án trọn gói thông qua Fractal. Hình thức cụ thể được thống nhất sau buổi trao đổi đầu tiên.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Dự án của tôi còn ở giai đoạn ý tưởng, có phù hợp không? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+            <p>Phù hợp. Giai đoạn ý tưởng là lúc quyết định kiến trúc và công nghệ có tác động lớn nhất tới chi phí về sau.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Thông tin dự án có được bảo mật không? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+            <p>Có. Tôi sẵn sàng ký thoả thuận bảo mật (NDA) trước khi đi vào chi tiết kỹ thuật hoặc kinh doanh.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Anh có làm việc với khách hàng nước ngoài không? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+            <p>Có. Tôi đã tham gia sản phẩm cho khách hàng tại Singapore và Mỹ, làm việc bằng tiếng Việt hoặc tiếng Anh, trực tiếp hoặc từ xa.</p>
+          </details>
+          <details class="qa reveal">
+            <summary>Bao lâu tôi nhận được phản hồi? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+            <p>Thông thường trong vòng 1 đến 2 ngày làm việc kể từ khi nhận được tin nhắn.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <h2 class="contact__title reveal">Có bài toán công nghệ cần giải? Hãy trao đổi.</h2>
+          <p class="section__lead reveal">Chia sẻ ngắn gọn về dự án, tôi sẽ phản hồi để hẹn lịch trao đổi cụ thể.</p>
+
+          <ul class="channels reveal">
+            <li>
+              <a href="mailto:dat.le@fractal.vn">
+                <i class="ph ph-envelope-simple" aria-hidden="true"></i>
+                <span><small>Email</small>dat.le@fractal.vn</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+84975752737">
+                <i class="ph ph-phone" aria-hidden="true"></i>
+                <span><small>Điện thoại</small>+84 975 752 737</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://zalo.me/0975752737" target="_blank" rel="noopener">
+                <i class="ph ph-chat-circle-dots" aria-hidden="true"></i>
+                <span><small>Zalo</small>0975 752 737</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://fractal.vn" target="_blank" rel="noopener">
+                <i class="ph ph-buildings" aria-hidden="true"></i>
+                <span><small>Công ty</small>Công ty CP Công nghệ Fractal</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="f-name">Họ và tên</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <p class="field__error" id="e-name"></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+            <p class="field__error" id="e-email"></p>
+          </div>
+          <div class="field">
+            <label for="f-company">Công ty <span class="optional">(không bắt buộc)</span></label>
+            <input id="f-company" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-msg">Nội dung</label>
+            <textarea id="f-msg" name="message" rows="5" required data-help="h-msg" aria-describedby="h-msg"></textarea>
+            <p class="field__help" id="h-msg">Mục tiêu, giai đoạn hiện tại và thời gian mong muốn.</p>
+            <p class="field__error" id="e-msg"></p>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Gửi tin nhắn <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i></button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year">2026</span> Lê Quốc Đạt. Phó Giám đốc Kỹ thuật, Công ty CP Công nghệ Fractal.</p>
+      <div class="footer__links">
+        <a href="cv.pdf" download>Tải CV</a>
+        <a href="#top">Về đầu trang</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
