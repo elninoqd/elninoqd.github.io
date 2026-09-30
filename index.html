@@ -25,13 +25,8 @@
   <link rel="stylesheet" href="styles.css">
 
   <script>
-    // Chọn theme trước khi render để tránh nháy màn hình
-    (function () {
-      var t = null;
-      try { t = localStorage.getItem('theme'); } catch (e) {}
-      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
+    // Tạm khoá giao diện tối (không theo hệ điều hành, không lưu lựa chọn cũ)
+    document.documentElement.setAttribute('data-theme', 'dark');
   </script>
 
   <script type="application/ld+json">
@@ -68,7 +63,8 @@
       </nav>
 
       <div class="nav__actions">
-        <button class="icon-btn" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối">
+        <!-- Tạm ẩn nút đổi giao diện sáng/tối. Bật lại: bỏ thuộc tính hidden và khôi phục đoạn chọn theme trong <head> -->
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối" hidden>
           <i class="ph ph-sun theme-icon--light" aria-hidden="true"></i>
           <i class="ph ph-moon theme-icon--dark" aria-hidden="true"></i>
         </button>

@@ -147,6 +147,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .icon-btn:hover { background: var(--surface-2); border-color: var(--border-strong); }
 
+.icon-btn[hidden] { display: none; }
+
 [data-theme="dark"] .theme-icon--dark,
 [data-theme="light"] .theme-icon--light { display: none; }
 
