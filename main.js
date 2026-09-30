@@ -109,10 +109,26 @@ if (!reduce) {
 /* ---------- Contact form: validate, then open mail client ---------- */
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
+const EN = document.documentElement.lang === 'en';
+const T = EN
+  ? {
+      name: 'Please enter your name.',
+      email: 'That email address looks incorrect.',
+      message: 'Your message needs at least 10 characters.',
+      subject: 'Collaboration inquiry',
+      status: 'Your email app is opening with the message prefilled.',
+    }
+  : {
+      name: 'Vui lòng nhập họ tên.',
+      email: 'Email chưa đúng định dạng.',
+      message: 'Nội dung cần ít nhất 10 ký tự.',
+      subject: 'Trao đổi hợp tác',
+      status: 'Ứng dụng email của bạn đang được mở với nội dung đã điền sẵn.',
+    };
 const rules = {
-  name: (v) => (v.trim() ? '' : 'Vui lòng nhập họ tên.'),
-  email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Email chưa đúng định dạng.'),
-  message: (v) => (v.trim().length >= 10 ? '' : 'Nội dung cần ít nhất 10 ký tự.'),
+  name: (v) => (v.trim() ? '' : T.name),
+  email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : T.email),
+  message: (v) => (v.trim().length >= 10 ? '' : T.message),
 };
 const errId = { name: 'e-name', email: 'e-email', message: 'e-msg' };
 
@@ -138,10 +154,10 @@ form.addEventListener('submit', (e) => {
     return;
   }
   const d = Object.fromEntries(new FormData(form));
-  const subject = `Trao đổi hợp tác: ${d.name}${d.company ? ` (${d.company})` : ''}`;
+  const subject = `${T.subject}: ${d.name}${d.company ? ` (${d.company})` : ''}`;
   const body = `${d.message}\n\n---\n${d.name}\n${d.email}${d.company ? `\n${d.company}` : ''}`;
   window.location.href = `mailto:dat.le@fractal.vn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  status.textContent = 'Ứng dụng email của bạn đang được mở với nội dung đã điền sẵn.';
+  status.textContent = T.status;
 });
 
 /* ---------- Footer year ---------- */

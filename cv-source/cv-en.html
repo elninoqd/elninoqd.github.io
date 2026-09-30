@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CV - Lê Quốc Đạt (English)</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 12mm 14mm 12mm 14mm; }
+  :root { --ink: #16181d; --muted: #5b616b; --line: #d9dce1; --gold: #8a6414; --soft: #f4f1e8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 400 9.1pt/1.45 "Be Vietnam Pro", Arial, sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h1, h2, h3, p, ul { margin: 0; padding: 0; }
+  ul { list-style: none; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
+  h1 { font-size: 25pt; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+  .role { margin-top: 6px; font-size: 10.5pt; font-weight: 600; color: var(--gold); }
+  .contact { text-align: right; font-size: 9pt; color: var(--muted); line-height: 1.6; }
+  .contact strong { color: var(--ink); font-weight: 600; }
+
+  section { margin-top: 14px; }
+  h2 { font-size: 9.5pt; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); padding-bottom: 4px; border-bottom: 1px solid var(--line); margin-bottom: 9px; }
+
+  .summary { max-width: 178mm; }
+  .summary p + p { margin-top: 5px; }
+
+  .path { display: grid; grid-template-columns: 26mm 1fr; row-gap: 5px; }
+  .path dt { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .path dd { margin: 0; }
+  .path dd span { color: var(--muted); }
+
+  .companies { display: grid; grid-template-columns: 26mm 1fr; row-gap: 5px; }
+  .companies b { font-weight: 600; }
+
+  .skills { display: grid; grid-template-columns: 40mm 1fr; row-gap: 4px; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: var(--ink); }
+
+  .project { padding: 6px 0 7px; border-bottom: 1px solid var(--line); break-inside: avoid; }
+  .project:last-child { border-bottom: 0; }
+  .project__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  h3 { font-size: 10.4pt; font-weight: 700; }
+  .period { font-size: 8.8pt; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .meta { margin-top: 2px; font-size: 8.6pt; color: var(--muted); }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .project p { margin-top: 4px; }
+  .project ul { margin-top: 3px; }
+  .project li { position: relative; padding-left: 10px; }
+  .project li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+  .tag { display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 3px; background: var(--soft); color: var(--gold); font-size: 7.8pt; font-weight: 600; vertical-align: 1px; }
+
+  .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .edu b { font-weight: 600; }
+  .edu span { color: var(--muted); display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Lê Quốc Đạt</h1>
+    <p class="role">Deputy CTO · Technical Leader</p>
+  </div>
+  <div class="contact">
+    <div><strong>dat.le@fractal.vn</strong></div>
+    <div>+84 975 752 737</div>
+    <div>quocdat.lequoc@gmail.com</div>
+    <div>Fractal Technology Corporation</div>
+  </div>
+</header>
+
+<section class="summary">
+  <h2>Profile</h2>
+  <p>12+ years in technology, growing from embedded / microcontroller programming through 20+ mobile and web products to technical leadership. Currently Deputy CTO at Fractal, overseeing multiple projects in parallel and accountable for architecture, code quality, technical hiring and working with enterprise clients.</p>
+  <p>Turning business problems into reliable production systems for enterprises, across retail, e-commerce, distribution, loyalty/CRM, media streaming and child nutrition.</p>
+</section>
+
+<section>
+  <h2>Career progression</h2>
+  <dl class="path">
+    <dt>2026</dt><dd><b>Deputy CTO</b></dd>
+    <dt>2025</dt><dd><b>Technical Leader</b> <span>(Abbott, Khatoco)</span></dd>
+    <dt>2023 - 2024</dt><dd><b>Web Developer + Mobile Leader</b></dd>
+    <dt>2020 - 2022</dt><dd><b>Mobile Leader</b> <span>(Android, iOS, Flutter)</span></dd>
+    <dt>2015 - 2020</dt><dd><b>Android Developer</b></dd>
+    <dt>2014 - 2015</dt><dd><b>Embedded Engineer</b> <span>(Embedded / microcontroller programming)</span></dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Companies</h2>
+  <dl class="companies">
+    <dt>2018 - present</dt><dd><b>Fractal Technology Corporation</b></dd>
+    <dt>2016 - 2018</dt><dd><b>FPT Software</b></dd>
+    <dt>2014 - 2015</dt><dd><b>Elitech Vietnam</b> <span style="color:var(--muted)">(now NASYS Co., Ltd.)</span></dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Technical skills</h2>
+  <dl class="skills">
+    <dt>Mobile</dt><dd>Android (Kotlin, Java, NDK), iOS, Flutter/Dart</dd>
+    <dt>Web</dt><dd>ReactJS, NodeJS</dd>
+    <dt>Embedded and algorithms</dt><dd>C/C++, STM32 (ARM), MATLAB, neural networks, algorithms and data structures</dd>
+    <dt>Architecture</dt><dd>Solution architecture, Design Patterns, RESTful API, data modeling (ERD)</dd>
+    <dt>Media and connectivity</dt><dd>Video streaming, RTSP, Socket, TCP/UDP, OpenCV</dd>
+    <dt>Integrations</dt><dd>Payments (including POS terminals), Google Maps, Google Analytics, social login</dd>
+    <dt>Leadership</dt><dd>Leading engineering teams, code review, development process, working directly with clients, collaborating with design and backend teams</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Selected projects</h2>
+
+  <div class="project">
+    <div class="project__head"><h3>Plate Tool - Zalo Mini App for child nutrition tracking</h3><span class="period">2025 - present</span></div>
+    <p class="meta"><b>Role:</b> Technical Leader · <b>Team:</b> 4 · <b>Tech:</b> Zalo Mini App, NodeJS, ReactJS</p>
+    <p>A tool that lets parents calculate calories from their child's meals, compare them with age-based nutrition standards and receive personalized reports and recommendations.</p>
+    <ul><li>Designed the overall architecture and set the technical direction.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>Nemo - Promoter (PG) staff management app</h3><span class="period">2023 - 2024, maintained to date</span></div>
+    <p class="meta"><b>Role:</b> Web Developer, Mobile Leader · <b>Team:</b> 5 · <b>Tech:</b> Mobile App, Web Dashboard</p>
+    <p>Digitizing in-store promoter work: task assignment, promotion rollout, digital reports and KPI dashboards for managers.</p>
+    <ul><li>Led mobile app development and contributed to the web part.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>Friso Loyalty - Customer loyalty CRM platform (FrieslandCampina Vietnam)</h3><span class="period">2022/02 - 2023/03</span></div>
+    <p class="meta"><b>Role:</b> Mobile Leader · <b>Team:</b> 3 · <b>Tech:</b> Flutter, NodeJS, ReactJS</p>
+    <p>A CRM tracking the Lead - Deal - Engage journey, with points and rewards, vouchers, membership tiers and marketing campaign automation.</p>
+    <ul><li>Set up the project structure, built features and aligned the data model with the backend team.</li><li>Code review and bug fixing.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>Murad - E-commerce platform</h3><span class="period">2020/06 - 2022/02</span></div>
+    <p class="meta"><b>Role:</b> Mobile Leader (Android, iOS, Flutter) · <b>Team:</b> 6 · <b>Tech:</b> Flutter, Android, iOS</p>
+    <p>An ecosystem of an e-commerce website, an internal CRM and an Affiliate/B2B Referral system for the cosmetics brand Murad.</p>
+    <ul><li>Led the mobile team, set up the project structure, reviewed code and coordinated with backend and web.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>Khatoco (KTC) - Field sales force management platform</h3><span class="period">2019/05 - 2020/06, maintained to date</span></div>
+    <p class="meta"><b>Role:</b> Android Developer · <b>Team:</b> 6 · <b>Tech:</b> Android, .NET</p>
+    <p>An app for sales staff: customer visit logging, GPS attendance, KPI tracking, inventory management and approval workflows. Currently serves 500+ sales staff and 80 supervisors.</p>
+    <ul><li>Set up the project structure, built features, reviewed code and aligned the data model with backend.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>BAT - Distributor management system (DMS)</h3><span class="period">2018/10 - 2019/04, maintained to date</span></div>
+    <p class="meta"><b>Role:</b> Android Developer · <b>Team:</b> 8 · <b>Tech:</b> Android, RESTful API</p>
+    <p>A distributor management system for British American Tobacco: sales team management, trade promotions, market activation, BI dashboards and KPI reporting nationwide.</p>
+    <ul><li>Contributed to development and have kept the system running since launch.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>Abbott Detailing - Product presentation and CRM app</h3><span class="period">2018/04 - 2018/10</span></div>
+    <p class="meta"><b>Role:</b> Android Developer · <b>Team:</b> 4 · <b>Tech:</b> Android, MVP, RESTful API</p>
+    <p>Apps for each milk brand (Glucerna, Similac, Ensure) used by staff to present products and collect customer information for CRM.</p>
+    <ul><li>Worked with the design team on requirements and UI; built the MVP structure; aligned the data model with backend.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>CapitaStar - CapitaLand deals and rewards app (Singapore)</h3><span class="period">2017/08 - 2018/04</span></div>
+    <p class="meta"><b>Role:</b> Android Developer · <b>Team:</b> 10 · <b>Tech:</b> Android, NDK, OpenCV, Google Analytics, Payment</p>
+    <p>A shopping, points and rewards app for the CapitaLand mall chain, plus a separate merchant app with POS payment integration.</p>
+    <ul><li>Built payment features, integrated Google Analytics, and handled image processing with NDK and OpenCV.</li><li>Built the merchant app for stores.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>DIRECTV for Tablets (US)</h3><span class="period">2016/08 - 2017/08</span></div>
+    <p class="meta"><b>Role:</b> Android Developer · <b>Team:</b> 10 · <b>Tech:</b> Android, Video Streaming</p>
+    <p>An app for watching movies, shows and sports on Android tablets, managing recordings and casting to TV, with social interaction while watching.</p>
+    <ul><li>Fixed bugs and improved features on the streaming platform.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>ONVIF Viewer - IP camera viewing and control app</h3><span class="period">2015/07 - 2016/07</span></div>
+    <p class="meta"><b>Role:</b> Android Developer · <b>Team:</b> 3 · <b>Tech:</b> Android, RTSP, Socket, Video Streaming, MVP</p>
+    <p>An app to monitor, control and configure IP cameras over RTSP, supporting a wide range of camera models.</p>
+    <ul><li>Built the UI with the design team; worked with the C++ and backend teams on solutions; resolved performance issues; streamed camera data over sockets.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>Eli Remote - Remote desktop control app for Android</h3><span class="period">2015/01 - 2015/07</span></div>
+    <p class="meta"><b>Role:</b> Android Developer · <b>Team:</b> 3 · <b>Tech:</b> Android NDK, C/C++, TCP/UDP</p>
+    <p>A remote-control app for computers, phones and tablets, similar to TeamViewer.</p>
+    <ul><li>Built the UI with the design team, developed features at the NDK level and aligned the data model with the Windows team.</li></ul>
+  </div>
+
+  <div class="project">
+    <div class="project__head"><h3>Smart Home - Voice-controlled devices</h3><span class="period">2014/08 - 2015/01</span></div>
+    <p class="meta"><b>Role:</b> Lead implementer · <b>Team:</b> 2 · <b>Tech:</b> STM32 (ARM), C/C++, MATLAB, Neural Network, RF</p>
+    <p>A microcontroller project using an STM32 chip combined with a voice-recognition algorithm in MATLAB to control devices by voice over RF.</p>
+    <ul><li>Designed the STM32 and transceiver circuits, connected to a computer over USB, collected sample data, then trained and deployed the recognition model.</li></ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education and certification</h2>
+  <div class="edu">
+    <div><b>Posts and Telecommunications Institute of Technology (PTIT)</b><span>Electrical and Electronic Engineering Technology · GPA 7.62/10</span></div>
+    <div><b>Android ATC AND-401</b><span>Android Application Development, Android Advanced Training Consultants</span></div>
+  </div>
+</section>
+
+</body>
+</html>

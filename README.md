@@ -23,3 +23,9 @@ Mở http://localhost:5173
 
 - **Vercel / Netlify:** kéo thả thư mục này, hoặc kết nối repo GitHub.
 - **GitHub Pages:** push lên repo, bật Pages ở nhánh `main`.
+
+## Hai ngôn ngữ
+
+- Tiếng Việt: `index.html` (trang chủ). Tiếng Anh: `en/index.html` (địa chỉ `/en/`).
+- CV: `cv.pdf` (Việt) và `cv-en.pdf` (Anh). Nguồn ở `cv-source/cv.html` và `cv-source/cv-en.html`.
+- Khi sửa nội dung, cần sửa cả hai phiên bản để hai trang luôn khớp nhau.
