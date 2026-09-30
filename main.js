@@ -109,6 +109,10 @@ if (!reduce) {
 /* ---------- Contact form: validate, then open mail client ---------- */
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
+/* Contact form delivery. Paste a free Web3Forms access key (web3forms.com) to send messages
+   straight to your inbox. While empty, the form falls back to opening the visitor's email app. */
+const FORM_ACCESS_KEY = '';
+
 const EN = document.documentElement.lang === 'en';
 const T = EN
   ? {
@@ -117,6 +121,9 @@ const T = EN
       message: 'Your message needs at least 10 characters.',
       subject: 'Collaboration inquiry',
       status: 'Your email app is opening with the message prefilled.',
+      sending: 'Sending...',
+      sent: 'Thank you. Your message has been sent and I will reply soon.',
+      failed: 'Sorry, the message could not be sent. Please email me directly.',
     }
   : {
       name: 'Vui lòng nhập họ tên.',
@@ -124,6 +131,9 @@ const T = EN
       message: 'Nội dung cần ít nhất 10 ký tự.',
       subject: 'Trao đổi hợp tác',
       status: 'Ứng dụng email của bạn đang được mở với nội dung đã điền sẵn.',
+      sending: 'Đang gửi...',
+      sent: 'Cảm ơn bạn. Tin nhắn đã được gửi, tôi sẽ phản hồi sớm.',
+      failed: 'Rất tiếc, chưa gửi được tin nhắn. Bạn vui lòng gửi email trực tiếp giúp tôi.',
     };
 const rules = {
   name: (v) => (v.trim() ? '' : T.name),
@@ -145,16 +155,51 @@ function check(field) {
 }
 Object.keys(rules).forEach((f) => form.elements[f].addEventListener('blur', () => check(f)));
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const ok = Object.keys(rules).map(check).every(Boolean);
+  status.classList.remove('is-error');
   if (!ok) {
     status.textContent = '';
     form.querySelector('.has-error input, .has-error textarea')?.focus();
     return;
   }
   const d = Object.fromEntries(new FormData(form));
+  if (d.botcheck) { status.textContent = T.sent; form.reset(); return; }
   const subject = `${T.subject}: ${d.name}${d.company ? ` (${d.company})` : ''}`;
+
+  if (FORM_ACCESS_KEY) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    status.textContent = T.sending;
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: FORM_ACCESS_KEY,
+          subject,
+          from_name: d.name,
+          name: d.name,
+          email: d.email,
+          company: d.company || '-',
+          message: d.message,
+          botcheck: '',
+        }),
+      });
+      const out = await res.json();
+      if (!res.ok || !out.success) throw new Error(out.message || 'failed');
+      status.textContent = T.sent;
+      form.reset();
+    } catch (err) {
+      status.classList.add('is-error');
+      status.textContent = T.failed;
+    } finally {
+      submitBtn.disabled = false;
+    }
+    return;
+  }
+
   const body = `${d.message}\n\n---\n${d.name}\n${d.email}${d.company ? `\n${d.company}` : ''}`;
   window.location.href = `mailto:dat.le@fractal.vn?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   status.textContent = T.status;
@@ -162,3 +207,26 @@ form.addEventListener('submit', (e) => {
 
 /* ---------- Footer year ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+/* ---------- Reveal phone / Zalo on demand (kept out of the static HTML) ---------- */
+document.querySelectorAll('.reveal-contact').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const n = atob(btn.dataset.v);
+    const a = document.createElement('a');
+    let text;
+    if (btn.dataset.kind === 'tel') {
+      a.href = `tel:+84${n.slice(1)}`;
+      text = `+84 ${n.slice(1, 4)} ${n.slice(4, 7)} ${n.slice(7)}`;
+    } else {
+      a.href = `https://zalo.me/${n}`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      text = `${n.slice(0, 4)} ${n.slice(4, 7)} ${n.slice(7)}`;
+    }
+    const label = btn.querySelector('small').textContent;
+    a.innerHTML = `${btn.querySelector('i').outerHTML}<span><small>${label}</small>${text}</span>`;
+    btn.replaceWith(a);
+    a.focus();
+  });
+});

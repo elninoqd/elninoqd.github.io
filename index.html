@@ -43,7 +43,6 @@
     "jobTitle": "Phó Giám đốc Kỹ thuật",
     "worksFor": { "@type": "Organization", "name": "Công ty Cổ phần Công nghệ Fractal", "url": "https://fractal.vn" },
     "email": "mailto:dat.le@fractal.vn",
-    "telephone": "+84975752737",
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Học viện Công nghệ Bưu chính Viễn thông (PTIT)" },
     "knowsAbout": ["Android", "Kotlin", "Flutter", "iOS", "ReactJS", "NodeJS", "Solution Architecture", "Embedded Systems", "Technical Leadership"]
   }
@@ -643,16 +642,10 @@
               </a>
             </li>
             <li>
-              <a href="tel:+84975752737">
-                <i class="ph ph-phone" aria-hidden="true"></i>
-                <span><small>Điện thoại</small>+84 975 752 737</span>
-              </a>
+              <button type="button" class="reveal-contact" data-kind="tel" data-v="MDk3NTc1MjczNw=="><i class="ph ph-phone" aria-hidden="true"></i><span><small>Điện thoại</small>Bấm để xem số</span></button>
             </li>
             <li>
-              <a href="https://zalo.me/0975752737" target="_blank" rel="noopener">
-                <i class="ph ph-chat-circle-dots" aria-hidden="true"></i>
-                <span><small>Zalo</small>0975 752 737</span>
-              </a>
+              <button type="button" class="reveal-contact" data-kind="zalo" data-v="MDk3NTc1MjczNw=="><i class="ph ph-chat-circle-dots" aria-hidden="true"></i><span><small>Zalo</small>Bấm để xem số</span></button>
             </li>
             <li>
               <a href="https://fractal.vn" target="_blank" rel="noopener">
@@ -684,6 +677,7 @@
             <p class="field__help" id="h-msg">Mục tiêu, giai đoạn hiện tại và thời gian mong muốn.</p>
             <p class="field__error" id="e-msg"></p>
           </div>
+          <input type="text" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button type="submit" class="btn btn--primary btn--block">Gửi tin nhắn <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i></button>
           <p class="form__status" id="formStatus" role="status"></p>
         </form>
