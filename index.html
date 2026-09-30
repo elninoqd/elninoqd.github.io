@@ -21,11 +21,12 @@
   <link rel="alternate" hreflang="en" href="https://lequocdat.web.app/en/">
   <link rel="alternate" hreflang="x-default" href="https://lequocdat.web.app/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0e10'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='30' font-weight='700' fill='%23d6ad55'%3EQD%3C/text%3E%3C/svg%3E">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="preload" href="assets/fonts/be-vietnam-pro-normal-800-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/be-vietnam-pro-normal-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/be-vietnam-pro-normal-400-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/be-vietnam-pro-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/phosphor-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/avatar.jpg" as="image" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 
   <script>
@@ -72,7 +73,7 @@
           <i class="ph ph-sun theme-icon--light" aria-hidden="true"></i>
           <i class="ph ph-moon theme-icon--dark" aria-hidden="true"></i>
         </button>
-        <a class="lang-btn" href="en/" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
+        <a class="lang-btn" href="en/" hreflang="en" lang="en" aria-label="EN, English version">EN</a>
         <a href="#contact" class="btn btn--primary btn--sm nav__cta">Đặt lịch trao đổi</a>
         <button class="icon-btn nav__menu" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mobileMenu">
           <i class="ph ph-list" aria-hidden="true"></i>
