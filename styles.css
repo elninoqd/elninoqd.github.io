@@ -457,6 +457,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .cell__platforms { top: 22px; right: 22px; }
   .cell__platforms i { width: 48px; height: 48px; font-size: 24px; }
   .cell--hw { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .cell--hw > div, .cell--hw p { flex: 0 0 auto; }
 }
 
 /* =========================================================
